@@ -15,8 +15,8 @@ const navigationData: NavigationSection[] = [
 
 export function CallToAction() {
     return (
-      <a href="#get-started" className="hidden md:inline-block hover:scale-110 transition-transform duration-300 shadow-2xl">
-        <Button className="pointer-events-none transition-transform duration-300">
+      <a href="#get-started" className="hidden md:inline-block hover:scale-110 transition-transform duration-300">
+        <Button className="pointer-events-none transition-transform duration-300 font-bold">
             Get Started
             <span><ArrowUpRight className="ml-2 h-4 w-4" /></span>
         </Button>
