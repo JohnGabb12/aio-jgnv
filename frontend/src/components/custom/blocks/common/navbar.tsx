@@ -4,7 +4,6 @@ import Logo from "@/assets/logo/logo";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuGroup, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
-import { Drawer, DrawerClose, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 import { cn } from "@/lib/utils";
 import { MenuIcon } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
@@ -56,7 +55,7 @@ export default function Navbar({ navigationData, activeSection, callToAction }: 
                             </Link>
                             <div className="mr-auto">
                                 <NavigationMenu>
-                                    <NavigationMenuList className="hidden lg:flex gap-6">
+                                    <NavigationMenuList className="hidden md:flex gap-6">
                                         {navigationData.map((item) => (
                                             <NavigationMenuItem key={item.title}>
                                                 <NavigationMenuLink href={item.href} className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors duration-300">
@@ -68,10 +67,10 @@ export default function Navbar({ navigationData, activeSection, callToAction }: 
                                 </NavigationMenu>
                             </div>
                         </div>
-                        <div className="hidden lg:block ml-auto">
+                        <div className="hidden md:block ml-auto">
                             { callToAction }
                         </div>
-                        <div className="lg:hidden ml-auto">
+                        <div className="md:hidden ml-auto">
                             <DropdownMenu>
                                 <DropdownMenuTrigger className='md:hidden' asChild>
                                     <Button variant='outline' size='icon'>
