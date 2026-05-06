@@ -1,4 +1,4 @@
-import  Navbar, { NavigationSection } from "@/components/custom/blocks/common/navbar";
+import  Navbar, { NavigationSection } from "@/components/landing-page-components/landing-navbar";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 
