@@ -1,23 +1,15 @@
 import type { Metadata } from "next";
-import { DM_Sans, Inter, Manrope, Archivo_Black } from "next/font/google";
+import { Elms_Sans, Archivo_Black } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const interHeading = Archivo_Black({subsets:['latin'],variable:'--font-heading', weight: "400"});
-const manrope = Archivo_Black({subsets:['latin'],variable:'--font-sans', weight: "400"});
-
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets: ["latin"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
+const elmsSans = Elms_Sans({
+  variable: "--font-elms-sans",
   subsets: ["latin"],
 });
 
 const archivoBlack = Archivo_Black({
-  variable: "--font-archivo-black",
+  variable: "--font-archivo-black-next",
   subsets: ["latin"],
   weight: "400",
 });
@@ -41,9 +33,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", archivoBlack.variable)}
+      className={cn("h-full", "antialiased", elmsSans.variable, archivoBlack.variable)}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className={cn("min-h-full flex flex-col", elmsSans.className)}>{children}</body>
     </html>
   );
 }

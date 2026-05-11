@@ -1,4 +1,34 @@
-.jgnv-backdrop-text {
-    font-size: 30vw;
-    font-family: "Archivo Black", sans-serif;
+.clipped {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  clip-path: url(#svgTextPath);
+  filter: blur(10px);
+} 
+
+/* Sliding gradient for CTA backgrounds - wider and rotated */
+@keyframes gradient-slide-right {
+  0% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 125% 100%;
+  }
+}
+
+.animate-gradient-slide {
+  background-size: 500% 500%;
+  animation: gradient-slide-right 10s linear infinite;
+}
+
+/* 45deg rotated gradient with custom colors (smooth wide band) */
+.gradient-45 {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-chart-1) 0%,
+    var(--color-chart-2) 25%,
+    var(--color-chart-3) 50%,
+    var(--color-chart-2) 75%,
+    var(--color-chart-1) 100%
+  );
 }

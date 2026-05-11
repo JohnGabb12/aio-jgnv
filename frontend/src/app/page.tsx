@@ -2,6 +2,8 @@ import Image from "next/image";
 import { Metadata } from "next";
 import { Layout } from "@/components/landing-page-components/landing-home-layout";
 import Hero from "@/components/landing-page-components/hero";
+import ReactLenis from "lenis/react";
+import GradualBlur from "@/components/react-bits/effect/GradualBlur";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -9,10 +11,28 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+
+
 export default function Home() {
   return (
     <Layout>
-      <Hero></Hero>
+      <ReactLenis root />
+      <Hero />
+      <section className="h-screen">
+        <div className="h-full flex items-center justify-center">
+          <h1 className="text-4xl font-bold">Welcome to AIO JGNV</h1>
+        </div>
+      </section>
+      <section className="h-screen">
+        <div className="h-full flex items-center justify-center">
+          <h1 className="text-4xl font-bold">Explore our features</h1>
+        </div>
+      </section>
+      <section className="h-screen">
+        <div className="h-full flex items-center justify-center">
+          <h1 className="text-4xl font-bold">Join us today!</h1>
+        </div>
+      </section>
     </Layout>
   );
 }

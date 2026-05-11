@@ -57,7 +57,7 @@ export default function Navbar({ navigationData, activeSection, callToAction }: 
                         <BlurEntrance delay={3} duration={1} variants={variantsSlideUpFade}>
                             <div className="flex items-center gap-6 p-2 rounded-lg">
                                 <Link href="/">
-                                    <Logo />
+                                    <Logo className="w-10 h-auto aspect-square" />
                                     <span className="sr-only">Home</span>
                                 </Link>
                                 <div className="mr-auto">

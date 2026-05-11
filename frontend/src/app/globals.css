@@ -5,6 +5,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --font-archivo-black: var(--font-archivo-black-next);
+}
+
 :root {
   --background: oklch(0 0 0);
   --foreground: oklch(1.0000 0 0);
