@@ -1,18 +1,35 @@
 import React from "react";
 import { motion } from "motion/react";
 
-const variants = {
+const variantsDefault = {
   hidden: { filter: "blur(10px)", transform: "translateY(20%)", opacity: 0 },
   visible: { filter: "blur(0)", transform: "translateY(0)", opacity: 1 },
+};
+
+export type variantProps = {
+    hidden: {
+        filter?: string;
+        transform?: string;
+        opacity?: number;
+        scale?: number;
+    };
+    visible: {
+        filter?: string;
+        transform?: string;
+        opacity?: number;
+        scale?: number;
+    };
 };
 
 export type BlurEntranceTextProps = {
     duration?: number;
     text?: string;
     delay?: number;
+    variants?: variantProps;
 };
 
-export function BlurEntranceText({ duration = 2, text = "Default Text", delay = 0 }: BlurEntranceTextProps) {
+export function BlurEntranceText(
+    { duration = 2, text = "Default Text", delay = 0, variants = variantsDefault }: BlurEntranceTextProps) {
 
     const getTransition = (index: number) => ({
         duration: duration,
@@ -44,9 +61,10 @@ export type BlurEntranceProps = {
     duration?: number;
     delay?: number;
     children: React.ReactNode;
+    variants?: variantProps;
 };
 
-export function BlurEntrance({ duration = 2, delay = 0, children }: BlurEntranceProps) {
+export function BlurEntrance({ duration = 2, delay = 0, children, variants = variantsDefault }: BlurEntranceProps) {
     
     const getTransition = (index: number) => ({
         duration: duration,

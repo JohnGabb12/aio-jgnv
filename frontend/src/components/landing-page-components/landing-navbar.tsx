@@ -20,6 +20,11 @@ export type NavbarProps = {
     callToAction?: React.ReactNode;
 };
 
+const variantsSlideUpFade = {
+  hidden: { transform: "translateY(100%)", opacity: 0 },
+  visible: { transform: "translateY(0)", opacity: 1 },
+};
+
 export default function Navbar({ navigationData, activeSection, callToAction }: NavbarProps) {
     const [sticky, setSticky] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
@@ -44,13 +49,13 @@ export default function Navbar({ navigationData, activeSection, callToAction }: 
 
     return (
         <div>
-            <header className={"backdrop-blur-sm fixed w-full z-50 transition-all duration-300"}>
+            <header className="fixed w-full z-50 transition-all duration-300">
                 <div className="mx-auto w-full px-4 py-2 sm:px-6 lg:px-8 flex items-center">
                     <nav className={
                         cn("flex items-center w-full transition-all duration-300 p-2")
                     }>
-                        <BlurEntrance delay={1} duration={1}>
-                            <div className="flex items-center gap-6 bg-background/80 p-2 rounded-lg">
+                        <BlurEntrance delay={3} duration={1} variants={variantsSlideUpFade}>
+                            <div className="flex items-center gap-6 p-2 rounded-lg">
                                 <Link href="/">
                                     <Logo />
                                     <span className="sr-only">Home</span>
