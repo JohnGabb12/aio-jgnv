@@ -1,7 +1,7 @@
 "use client";
 
 import { BlurEntranceText, BlurEntrance } from "../custom/blocks/animations/blur-entrance";
-import BlurEffect from "react-progressive-blur";
+import { ProgressiveBlur } from "@/components/ui/progressive-blur"
 import DarkVeil from "@/components/react-bits/background/DarkVeil";
 import BlackCover from "../custom/blocks/black-cover";
 import { useRef } from "react";
@@ -47,11 +47,7 @@ export default function Hero() {
                             </svg>
                         </BlurEntrance>
                         
-                        <BlurEffect
-                            className="h-full bg-linear-to-t from-black/50 to-transparent"
-                            intensity={200}
-                            position="bottom"
-                        />
+                        <ProgressiveBlur height="100%" position="bottom" blurLevels={[0.5, 1, 4, 15, 64, 100, 200]} />
                     </div>
                 </div>
             </div>

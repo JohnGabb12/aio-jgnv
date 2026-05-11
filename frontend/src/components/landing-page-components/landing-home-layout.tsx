@@ -30,7 +30,7 @@ export function CallToAction() {
               <div
                 className="absolute transitiona-all duration-1000 opacity-70 -z-30 -inset-px gradient-45 animate-gradient-slide rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
             </div>
-            <span className="bg-clip-text text-white font-archivo-black flex font-bold text-2xl flex-row">
+            <span className="bg-clip-text text-white font-archivo-black flex font-bold text-2xl flex-row active:scale-95 transition-transform duration-300">
               Get Started
               <div
                 className="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-white/20 blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt">
