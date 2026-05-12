@@ -33,10 +33,25 @@ Other stuff:
     - lucide
     - lenis
     - motion
+    - diceui | File Upload
 
 
 ## Ongoing tasks
-- [-] Landing Page | Needs atleast 4 services to be finished to continue.
+- [-] Landing Page | Needs atleast 4 services finished to continue.
 - [ ] Extension converter
 Other services will be revealed in the future.
 
+```bash
+# nextjs dev env:
+pnpm dev || npm run dev
+
+# Qstash dev env:
+docker run -p 8080:8080 public.ecr.aws/upstash/qstash:latest qstash dev
+
+# ngrok dev env:
+ngrok http 3000
+
+```
+
+
+Task: Create page with component of conversion. Make it so that it uses development first.

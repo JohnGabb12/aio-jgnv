@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import Magnet from "@/components/react-bits/effect/Magnet";
 import { BlurEntrance } from "@/components/custom/blocks/animations/blur-entrance";
 import GradualBlur from "@/components/react-bits/effect/GradualBlur";
+import Link from "next/link";
 
 const variantsDefault = {
   hidden: { filter: "blur(10px)", transform: "translateY(20px)", opacity: 0 },
@@ -24,7 +25,7 @@ const navigationData: NavigationSection[] = [
 export function CallToAction() {
   return (
     <BlurEntrance delay={3} duration={1} variants={variantsDefault}>
-      <a href="#get-started" className="md:inline-block hover:scale-105 transition-transform duration-300">
+      <Link href="#get-started" className="md:inline-block hover:scale-105 transition-transform duration-300">
         <Magnet magnetStrength={6} padding={60}>
             <div className="gradient-45 animate-gradient-slide relative px-4 py-2 rounded-lg group">
               <div
@@ -39,7 +40,7 @@ export function CallToAction() {
             </span>
           </div>
         </Magnet>
-      </a>
+      </Link>
     </BlurEntrance>
   );
 }

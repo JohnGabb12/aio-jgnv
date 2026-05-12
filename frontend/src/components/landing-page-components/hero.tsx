@@ -20,7 +20,7 @@ export default function Hero() {
                     <BlurEntranceText delay={0.5} text="Experience the ultimate all-in-one dashboard and tools for JGNV, designed to empower your workflow and enhance productivity." />
                 </p>
             </div>
-            <div className="absolute inset-0 -z-1">
+            <div className="absolute inset-0 z-[-1]">
                 <div className="rotate-180 h-full w-full">
                     <DarkVeil
                         hueShift={340}

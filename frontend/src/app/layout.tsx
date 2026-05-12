@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { Elms_Sans, Archivo_Black } from "next/font/google";
+import { Lexend, Archivo_Black } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const elmsSans = Elms_Sans({
-  variable: "--font-elms-sans",
+const lexend = Lexend({
+  variable: "--font-lexend",
   subsets: ["latin"],
+  adjustFontFallback: false,
+  weight: ["400", "500", "600", "700"],
 });
 
 const archivoBlack = Archivo_Black({
@@ -33,9 +35,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", elmsSans.variable, archivoBlack.variable)}
+      className={cn("h-full", "antialiased", lexend.variable, archivoBlack.variable)}
     >
-      <body className={cn("min-h-full flex flex-col", elmsSans.className)}>{children}</body>
+      <body className={cn("min-h-full flex flex-col", lexend.className)}>{children}</body>
     </html>
   );
 }
